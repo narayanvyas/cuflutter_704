@@ -17,6 +17,54 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.deepPurple,
+        centerTitle: true,
+        title: Text(
+          'My First Page',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+      body: Column(
+        children: [
+          Row(
+            children: [
+              Column(
+                children: [
+                  Image.network(
+                    'https://cdn.pixabay.com/photo/2023/11/15/15/04/leaves-8390274_1280.jpg',
+                    width: 200,
+                  ),
+                  Container(
+                    height: 30,
+                  ),
+                  Text('This is an image'),
+                ],
+              ),
+              Container(
+                width: 20,
+              ),
+              Column(
+                children: [
+                  Image.network(
+                    'https://cdn.pixabay.com/photo/2023/11/15/15/04/leaves-8390274_1280.jpg',
+                    width: 200,
+                  ),
+                  Container(
+                    height: 30,
+                  ),
+                  Text('This is an image'),
+                ],
+              )
+            ],
+          ),
+          Container(
+            height: 50,
+          ),
+          Text('These are images'),
+        ],
+      ),
+    );
   }
 }
