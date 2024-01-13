@@ -12,6 +12,8 @@ void main() {
 // Hot Restart - Shift + r
 // Hot Reload - r
 
+final TextEditingController nameController = TextEditingController();
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -68,7 +70,9 @@ class HomePage extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 30, right: 30),
-            child: TextField(),
+            child: TextField(
+              controller: nameController,
+            ),
           ),
           Container(
             height: 30,
@@ -76,6 +80,7 @@ class HomePage extends StatelessWidget {
           ElevatedButton(
               onPressed: () {
                 print('Button Clicked');
+                print(nameController.text);
               },
               child: Text('Click Me'))
         ],
