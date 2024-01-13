@@ -63,6 +63,21 @@ class HomePage extends StatelessWidget {
             height: 50,
           ),
           Text('These are images'),
+          Container(
+            height: 50,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 30, right: 30),
+            child: TextField(),
+          ),
+          Container(
+            height: 30,
+          ),
+          ElevatedButton(
+              onPressed: () {
+                print('Button Clicked');
+              },
+              child: Text('Click Me'))
         ],
       ),
     );
